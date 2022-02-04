@@ -57,7 +57,7 @@ algorithm for each sequence in the alignment.
 ```
 
 #### Example:
-    assume you are in the KnotAli directory
+    Assume you are in the KnotAli directory
     ./build/src/KnotAli myinputfile.txt
     ./build/src/KnotAli -o outputfile.txt myinputfile.afa
     
