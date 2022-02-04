@@ -34,7 +34,9 @@ cmake --build build
 ```   
 This can be useful if you are getting errors about your compiler not having C++11 features.
 
-After installing you can move the executables wherever you wish, but you should not delete or move the simfold folder, or you must recompile the executables. If you move the folders and wish to recompile, you should first delete the created "build" folder before recompiling.
+After installing you can move the executables wherever you wish, but you should not delete or move the simfold folder, or you must 
+recompile the executables. If you move the folders and wish to recompile, you should first delete the created "build" folder 
+before recompiling.
 
 Help
 ========================================
@@ -43,7 +45,8 @@ Help
 Usage: KnotAli[options] [input file]
 ```
 
-Read input file from cmdline; predict minimum free energy and optimum structure using the time- and space-efficient MFE RNA folding algorithm for each sequence in the alignment.
+Read input file from cmdline; predict minimum free energy and optimum structure using the time- and space-efficient MFE RNA folding
+algorithm for each sequence in the alignment.
 
 ```
   -h, --help             Print help and exit
@@ -70,9 +73,12 @@ Read input file from cmdline; predict minimum free energy and optimum structure 
     
     _(((((((___((____________))__(((((_x_____)))))_____((((_________)))))))))))_xxx (consensus structure)
     
-    The consensus structure shown above is the result of the covariation portion of the algorithm. The '_' represents nucleotides that are allowed to pair 
-    in the final step. In contrast 'x' represents nucleotides which the covariation deemed unlikely to pair and thus are restricted from pairing. 
-    Each '(' and ')' an opening and closing base pair within the structure. The consensus can be seen when using the -v (verbose) command.
+    The consensus structure shown above is the result of the covariation portion of the algorithm. The '_' represents 
+    nucleotides that are allowed to pair in the final step. 
+    In contrast 'x' represents nucleotides which the covariation deemed unlikely to pair and thus 
+    are restricted from pairing. 
+    Each '(' and ')' an opening and closing base pair within the structure. The consensus can be seen when using the 
+    -v (verbose) command.
     
     After running KnotAli, you will have your output file (in the case of our example: align_sol1.txt) in the format of 
     
@@ -98,14 +104,18 @@ Read input file from cmdline; predict minimum free energy and optimum structure 
     (((((((..[([....])].(((((.......))))).....(((([.......])))))))))))....
     -11.61
 
-    For each sequence, KnotAli gives the minimum free energy and structure given the restricted structure found in the covariation step.
+    For each sequence, KnotAli gives the minimum free energy and structure given the restricted structure 
+    found in the covariation step.
     
 #### Example Info:
 
-    The three examples were aligned using the MUSCLE software (doi:10.1186/1471-2105-5-113). The first example: align_ex1.fa was compiled of 100 tRNA sequences 
-    in FASTA format. The results of running KnotAli on this example can also be found in align_sol1.txt. 
-    align_ex2.fa, also in FASTA format, is comprised of 100 RNaseP sequences and its structures are found in align_sol2.txt. 
-    Lastly, align_ex3.aln is an example file in CLUSTAL format. It was comprised of 100 SRP sequences, and its structure can found in align_sol3.txt
+    The three examples were aligned using the MUSCLE software (doi:10.1186/1471-2105-5-113). The first example: 
+    align_ex1.fa was compiled of 100 tRNA sequences in FASTA format. The results of running KnotAli on this
+    example can also be found in align_sol1.txt. 
+    align_ex2.fa, also in FASTA format, is comprised of 100 RNaseP sequences and its structures are 
+    found in align_sol2.txt. 
+    Lastly, align_ex3.aln is an example file in CLUSTAL format. It was comprised of 100 SRP sequences, 
+    and its structure can found in align_sol3.txt
     
     
 ##### References:
