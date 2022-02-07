@@ -118,10 +118,17 @@ algorithm for each sequence in the alignment.
     found in align_sol2.txt. 
     Lastly, align_ex3.aln is an example file in CLUSTAL format. It was comprised of 100 SRP sequences, 
     and its structure can found in align_sol3.txt
-    
+
+
     
 ##### References:
     Robert C. Edgar. MUSCLE: a multiple sequence alignment method with reduced time and space complexity. BMC Bioinformatics, 5:113, Aug 2004
+    
+### To cite:
+    The paper can be cited at https://www.doi.org/10.21203/rs.3.rs-700965/v1
+
+    The code can be cited at http://doi.org/10.5281/zenodo.5794719   
+    
     
 
 
