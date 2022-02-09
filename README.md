@@ -61,6 +61,8 @@ algorithm for each sequence in the alignment.
     ./build/src/KnotAli myinputfile.txt
     ./build/src/KnotAli -o outputfile.txt myinputfile.afa
     
+    Example 1:
+    
     
     Let's go through an example from the example folder: align_ex1.fa. The first three sequences from 
     this file are:
@@ -109,6 +111,77 @@ algorithm for each sequence in the alignment.
     For each sequence, KnotAli gives the minimum free energy and structure given the restricted 
     structure found in the covariation step.
     
+    
+    Example 2:
+    
+    
+    Let's now go through a CLUSTAL format example. The use of CLUSTAL format can be specified by -i parameter, 
+    followed by CLUSTAL. An example of this is:
+    
+    ./build/src/KnotAli -i CLUSTAL alignment.aln
+    
+    Our third example alignment is in this such format. When looking at the file, we see that it is written like so:
+
+    
+    
+    CLUSTAL W multiple sequence alignment
+
+
+    Arab.thal._AC005275                                          -------------------------------------GUCGAGCGAAGUA
+    Arab.thal._AC005662                                          -------------------------------------GUCGAGCUAAGUA
+    Arab.thal._AL161496                                          -------------------------------------GUCGAGCUAAGUA
+    ...
+    
+    
+    Arab.thal._AC005275                                          CGGGUCCACGGG--------CCGGUUCUGUUGCUGGCAUGUUUCUGGGCU
+    Arab.thal._AC005662                                          CGGGUCCACGGG--------CCGGUUCUGUUGUUGGCAUGUUUCUGGGCU
+    Arab.thal._AL161496                                          CGGGUCCACGGG--------CCGGUUCUGUUGUUGGCAUGUUUCUGGGCU
+    ...
+    
+    Each sequence has 50 nucleotides of its sequence following the name repeating for all the sequences. This continues 
+    for the length of the alignment 50 nucleotides at a time.
+    
+    We find the consensus structure for this alignment to be 
+    ___.________.____________________________________________________________(_____(_____))
+    _________________(_(_______________)_________________(__(______)___)__________________)
+    _____________________________________(_____________________(_(_________________________
+    _____________________________________(_(____)_)_.______________________________________
+    _____))____________(________________)_______)__________________________________________
+    _____________________________________________________________________
+    
+    
+    Similar to the first example, '(' and ')' denote base pairs within the structure. '_' denote unpaired and unrestricted
+    bases while '.' are restricted unpaired bases.
+    
+    We again show the first three predicted structures by KnotAli within the file. The output format for KnotAli is the same
+    regardless of the input format. In both cases, the final predictions are place in a file with FASTA formatting.
+    
+    >Arab.thal._AC005275
+    GUCGAGCGAAGUAACAUGAGCUUGUAACCCAUGUGGGGACAUUAAGAUGGUGGAACACUGGUUCGGGUCCACGGGCCGGUUCUGUUGCUGGCAUGUUUCUGGGCUGCCCAGUCCAAGCUGUGAG
+    UAAGACGUGUGUGUCAAGCGAAGGCUUGGCUCAAACGGCUGCUAAAGUUGGAGGGCAAUGCGUGAGGCUGGUUUCACAGAGCAGCGAUUACUUCCCGCUUACAGCAGUGGACGGAUCACAGUUU
+    GGCGUCGCUCAGAACCACUAUGGCCUGCUGGUCCGAUCUCAUCUGAACCACCAUUUU
+    ....................((([...[[[....]]].....])))[[[[[[[...[[[[[[[[[......]]]]]]]]]...((.((((...((...[[[[[...]]]]].(((((((....(
+    (..[[[[....]]]]..))...)))))))..))..)))).))...((.((((((((...((...(((((((((((...((((...(((..((..[[[[[......]]]]][[........]]..
+    )).))))))).)))..)))..)))))))..))))..)).)).))...]]]]]]]...
+    -50.05
+
+    >Arab.thal._AC005662
+    GUCGAGCUAAGUAACAUGAGCUUGUAACCCAUGUGGGGACAUUUAGAUGGUGGAACACUGGUUCGGGUCCACGGGCCGGUUCUGUUGUUGGCAUGUUUCUGGGCUGCCCAGUCCAAGCUGUGAG
+    UAAGACGUGUGUGUCAAGCGAAGGCUUGGCUCAAACGGCUUCUAAAGUUGGAGGGUAAUGCGUGAGGCUGGUUUCACAGAGCAGCGACUACUUCCCGCUUACAGCAGUGGACGGAUCACAGUUU
+    AGCGUCGCUCAGAACCACUAUGGCCUGCUGGUCCGAUCUCAUAUGAACCACCAUUU
+    ...[[[[[..[[..[[[..[[[.[[[[.....[[[[[[[[.[[[[[[....[[[..[[[[[[[[[......]]]]]]]]]]]]((((((((.......[[[[[...]]]]].(((((((....(
+    (..[[[[....]]]]..))...))))))).))).))))).]]]]]]]](((..(((.....(((((((((((....((((((...(((..((]]]]]]]]]]]]].]]].]].......]]]]]
+    )).)))))))..........))....)))))).....)))))....))).)))...
+    -48.5
+
+    >Arab.thal._AL161496
+    GUCGAGCUAAGUAACAUGAGCUUGUAACCCAUGUGGGGACAUUUAGAUGGUGGAACACUGGUUCGGGUCCACGGGCCGGUUCUGUUGUUGGCAUGUUUCUGGGCUGCCCAGUCCAAGCUGUGAG
+    UAAGACGUGUGUGUCAAGCGAAGGCUUGGCUCAAACGGCUUCUAAAGUUGGAGGGUAAUGCGUGAGGCUGGUUUCACAGAGCAGCGACUACUUCCCGCUUACAGCAGUGGACGGAUCACAGUUU
+    AGCGUCGCUCAGAACCACUAUGGCCUGCUGGUCCGAUCUCAUAUGAACCACCAUUUU
+    ..[[[[[[..........]]]]]]....[[[[.[[[[....]]]].]]]].[[[..[[[[[[[[[......]]]]]]]]]]]]((((((((.......[[[[[...]]]]].(((((((....(
+    (..[[[[....]]]]..))...))))))).))).))))).[[[((((.(((..(((.....(((((((((((....((((((...(((..((..[[[[[......]]]]]..]]].........
+    )).)))))))..........))....)))))).....)))))....))).)))))))
+    -48.63
 #### Example Info:
 
     The three examples were aligned using the MUSCLE software (doi:10.1186/1471-2105-5-113). 
