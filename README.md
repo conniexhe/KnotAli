@@ -184,13 +184,11 @@ algorithm for each sequence in the alignment.
     -48.63
 #### Example Info:
 
-    The three examples were aligned using the MUSCLE software (doi:10.1186/1471-2105-5-113). 
-    The first example: align_ex1.fa was compiled of 100 tRNA sequences in FASTA format. 
-    The results of running KnotAli on this example can also be found in align_sol1.txt. 
-    align_ex2.fa, also in FASTA format, is comprised of 100 RNaseP sequences and its structures are 
-    found in align_sol2.txt. 
-    Lastly, align_ex3.aln is an example file in CLUSTAL format. It was comprised of 100 SRP sequences, 
-    and its structure can found in align_sol3.txt
+    The three examples were aligned using the MUSCLE software (doi:10.1186/1471-2105-5-113). The first example: align_ex1.fa was
+    compiled of 100 tRNA sequences in FASTA format. The results of running KnotAli on this example can also be found in 
+    align_sol1.txt. align_ex2.fa, also in FASTA format, is comprised of 100 RNaseP sequences and its structures are found in 
+    align_sol2.txt. Lastly, align_ex3.aln is an example file in CLUSTAL format. It was comprised of 100 SRP sequences, and its 
+    structure can found in align_sol3.txt
 
 
     
