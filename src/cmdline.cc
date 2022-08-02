@@ -90,7 +90,7 @@ static void print_help_common(void)
 void cmdline_parser_print_help (void){
   int i = 0;
   print_help_common();
-  while (i < 8)
+  while (i < sizeof(args_info_help) / sizeof(*args_info_help))
     printf("%s\n", args_info_help[i++]);
 }
 
