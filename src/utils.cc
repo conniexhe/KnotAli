@@ -186,7 +186,7 @@ else{return false;}
 bool call_simfold2 (char *programPath, char *input_sequence, char *output_structure, double *output_energy) {
         
 
-	char config_file[200] = SIMFOLD_HOME "/params/multirnafold.conf";
+	char config_file[500] = SIMFOLD_HOME "/params/multirnafold.conf";
 
 	double temperature;
 	temperature = 37;
@@ -206,7 +206,7 @@ bool call_simfold2 (char *programPath, char *input_sequence, char *output_struct
 bool call_simfold3 (char *programPath, char *input_sequence, char *output_structure, double *output_energy, double *scores ,int n) {
         
 
-	char config_file[200] = SIMFOLD_HOME "/params/multirnafold.conf";
+	char config_file[500] = SIMFOLD_HOME "/params/multirnafold.conf";
 
 	double temperature;
 	temperature = 37;
