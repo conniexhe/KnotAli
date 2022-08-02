@@ -156,7 +156,7 @@ bool call_HFold (char *programPath, char *input_sequence, char *input_structure,
 bool call_simfold (char *programPath, char *input_sequence, char *input_structure, char *output_structure, double *output_energy) {
         
 
-	char config_file[200] = SIMFOLD_HOME "/params/multirnafold.conf";
+	char config_file[100] = SIMFOLD_HOME "/params/multirnafold.conf";
 
 	double temperature;
 	temperature = 37;
