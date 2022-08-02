@@ -111,7 +111,7 @@ void segfault_sigaction(int signal, siginfo_t *si, void *arg) {
 //Calling HFold: programPath = HFOLD
 //Calling HFold_PKonly: programPath = HFOLD_PKONLY
 bool call_HFold (char *programPath, char *input_sequence, char *input_structure, char *output_structure, double *output_energy) {
-	char config_file[200];
+	char config_file[350];
 	strcpy (config_file, SIMFOLD_HOME "/params/multirnafold.conf");
 
 	//what to fold: RNA or DNA
